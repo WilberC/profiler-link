@@ -36,6 +36,7 @@ const secondary = {
 
 export const theme = createMuiTheme({
   palette: {
+    background: "#EBEBEB",
     primary: {
       ...primary,
       light: primary[300],

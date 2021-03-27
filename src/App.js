@@ -1,11 +1,17 @@
 import './App.css';
-import { Button } from "@material-ui/core";
-import { Add as AddIcon } from "@material-ui/icons";
+import { ProfileData } from "./data";
+import { Profile } from "./components/profile";
+import { Container } from "@material-ui/core";
+
 
 function App() {
   return (
     <div className="App">
-      <Button startIcon={ <AddIcon/> } color="secondary" variant="contained">Send</Button>
+      <Container color="background" p={2}>
+        { [ProfileData].map(profile => (
+          <Profile key={ profile.name } profileData={ profile }/>
+        )) }
+      </Container>
     </div>
   );
 }
